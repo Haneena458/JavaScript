@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let first="Hello"
+    // let first1= first.toLowerCase("Hello")
+    // console.log(first1);
+
+    // let second ="World"
+    // let second2= second.toLowerCase("World")
+    // console.log(second2);
+
+   
+
+    function commonCharacter(val1,val2) {
+
+        var first =val1.toLowerCase();
+        var second =val2.toLowerCase();
+
+    let commonFound = false;
+    for (let i = 0; i < first.length; i++) {
+      for (let j = 0; j < second.length; j++) {
+        if (first[i] === second[j]) {
+          commonFound = true;
+          break;
+        }
+      }
+      if (commonFound) break;
+    }
+    if (commonFound) {
+      alert("common found");
+    } else {
+      alert("not found");
+    }
+    }
+    const val1=prompt("enter the first string")
+    const val2=prompt("enter the first string")
+    
+    commonCharacter(val1,val2)
+  </script>
+</html>

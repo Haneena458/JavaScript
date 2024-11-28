@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">heading</h1>
+    <p>javascript is a programming language</p>
+    <!-- <p>world of js</p> -->
+    <button onclick="changeColor()">button</button>
+    <button id="alert">alert</button>
+</body>
+
+
+<script>
+  const head = document.getElementById('heading')
+  const para = document.getElementsByTagName('p')[0]
+  const alerts = document.getElementById('alert')
+
+  
+
+  function changeColor(){
+    head.style.color="red"
+    head.style.backgroundColor="blue"
+    para.textContent="javascript and c also a programming language"
+  }
+  alerts.addEventListener("click",function(){
+    alert("text")
+  })
+</script>
+</html>

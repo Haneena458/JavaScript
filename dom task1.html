@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+
+    <script>
+      const sales_data = [
+        [1, "North Zone", 50000, 3000],
+        [2, "South Zone", 35000, 5000],
+        [3, "East Zone", 60000, 7000],
+        [4, "West Zone", 45000, 6000],
+      ];
+
+      console.log("arr", sales_data[0][1]);
+
+      const sales = [...sales_data];
+
+      let highestSalesZone = sales.reduce((maxzone, currentZone) => {
+        return currentZone[2] > maxzone[2] ? currentZone : maxzone;
+      });
+
+      console.log("zone with the highest sales:", highestSalesZone[1]);
+
+      let zoneAbove40k = sales
+        .filter((zone) => zone[2] > 40000)
+        .map((zone) => zone[1]);
+      console.log("Zones with sales above 40000:", zoneAbove40k);
+
+      let sortInAscending = sales.sort((a, b) => a[3] - b[3]);
+      console.log("zones sorted by returns (ascending)");
+      sortInAscending.forEach((zone) => console.log(zone[1]));
+
+      // let zoneAverage= sales
+
+      const totalReturns = sales_data.reduce((sum, zone) => sum + zone[3], 0);
+      const averageReturns = totalReturns / sales_data.length;
+
+      console.log("Average returns across all zones:", averageReturns);
+
+      const userDetails = {
+        name: "John Doe",
+        age: 14,
+        verified: false,
+      };
+
+      const newUser = userDetails;
+      console.log(newUser);
+
+      const newUsers = userDetails;
+      newUser.name = "Jane Doe";
+
+      console.log(newUser);
+
+      console.log(userDetails);
+
+      // Spread Method
+      //  let clone = { ...userDetails }
+
+      // // Object.assign() Method
+      // // let clone = Object.assign({}, userDetails)
+
+      // // // JSON.parse() Method
+      // let clone = JSON.parse(JSON.stringify(userDetails))
+    </script>
+  </body>
+</html>

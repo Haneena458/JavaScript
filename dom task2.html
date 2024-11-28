@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+
+    function removeVowels(str) {
+       return str.replace(/[aeiouAEIOU]/g, '');
+    }
+    console.log(removeVowels("hello world"));
+   
+    const original = { a: 1, b: { c: 2 } };
+    const duplicate = {...original}
+    console.log(original);
+    
+    duplicate.b.c=15;
+    console.log(duplicate);
+    
+    function countUp(n){
+        for (let i=1;i<=n;i++){
+            console.log(i);
+            
+        }
+    }
+    countUp(5)
+
+    function reverseDigits(num){
+       return parseInt(num.toString().split('').reverse().join(''), 10);
+    }
+
+
+function reverseDigits(num) {
+    // Convert the number to string, reverse it, and return the reversed string.
+    return num.toString().split('').reverse().join('');
+}
+
+
+
+    reverseDigits(100);
+
+    function firstNOdds(n){
+     for( let i=0;i<n;i++)
+     {
+        if(i % 2 ==1)
+     {
+        console.log(i);
+        
+     }
+     }
+    }
+
+
+
+  </script>
+</html>

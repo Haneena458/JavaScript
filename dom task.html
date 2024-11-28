@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="para">the world of javascript</p>
+    <h1 class="heading">heading</h1>
+    <!-- <button onclick="changeText()">head</button> -->
+    <button onclick="appendToBody()">button</button>
+    <h1 id="append"></h1>
+  </body>
+  <script>
+    const paragraph = document.getElementById("para");
+    function changeText() {
+      paragraph.textContent = "Hello, World!";
+      heading.style.backgroundColor = "yellow";
+    }
+
+    function appendToBody() {
+      const append = document.getElementById("append");
+      append.textContent = "this is a new div";
+
+      document.body.appendChild(append);
+
+      const head = document.getElementsByTagName("h1")[0];
+
+      if (!head) {
+        alert("No value");
+      } else {
+        head.remove();
+      }
+    }
+
+    let a = [7, 0, 5];
+    let one = a[0];
+    let two = [1];
+    let three = [2];
+
+    let b = [7, 0, 5];
+    const [one1, two2, three3] = b;
+    console.log(one1, two2, three3);
+
+    let obj = { name: "anu", age: 45, hobby: "reading" };
+    const { name, age, hobby } = obj;
+    console.log(name, age, hobby);
+
+    let object = { names: "liya", age: 20 };
+    var o = { ...object };
+    console.log(object);
+    console.log(o);
+
+    var o = { ...o, age: 21 };
+    console.log(o);
+  </script>
+</html>

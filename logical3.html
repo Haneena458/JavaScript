@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let a = "Listen";
+    // let str1=str.toLowerCase()
+    // console.log(str1);
+
+    let b = "Silent";
+    // let string1=string.toLowerCase("Silent")
+    // console.log(string1);
+
+    // let count1=str.length
+    // console.log(count1);
+
+    // let count2=string.length
+    // console.log(count2);
+
+    function anagram(a, b) {
+      let str1 = a.toLowerCase();
+      let string1 = b.toLowerCase();
+      // let count1 = str.length;
+      // console.log(count1);
+
+      // let count2 = string.length;
+      // console.log(count2);
+
+      if (str1.length !== string1.length) {
+        console.log("not anagrams");
+        return;
+      }
+
+      let first = str1.split("").sort().join("");
+      let second = string1.split("").sort().join("");
+
+      if (first === second) {
+        console.log("they are anagram");
+      } else {
+        console.log("not anagrams");
+      }
+    }
+    anagram(a, b);
+  </script>
+</html>
